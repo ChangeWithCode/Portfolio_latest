@@ -1,0 +1,102 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; /* Default CRA font stack */
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  padding-top: 60px; /* Adjust this to your actual header height */
+}
+
+/* Keep existing CRA styles or remove if not needed, for this step we mostly add new ones */
+.App {
+  /* text-align: center; */ /* Can be removed if sections handle their own text alignment */
+}
+
+header {
+  background-color: #282c34; /* Dark background for header */
+  color: white;
+  padding: 0 1em; /* Padding horizontal, vertical handled by height/flex */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px; /* Fixed header height */
+  box-sizing: border-box;
+  display: flex; /* Using flex to align nav items */
+  justify-content: center; /* Center nav within the header */
+  align-items: center; /* Vertically align nav items */
+}
+
+header nav a {
+  color: white;
+  margin: 0 15px; /* Space out nav links */
+  text-decoration: none;
+  font-size: 1.1em; /* Slightly larger font for nav links */
+}
+
+header nav a:hover {
+  color: #61dafb; /* React blue for hover, or any color you prefer */
+  text-decoration: underline;
+}
+
+section {
+  padding: 2em;
+  min-height: calc(80vh - 60px); /* Adjusted min-height for section content visibility */
+  /* border-bottom: 1px solid #ddd; */ /* Optional: adds line between sections */
+}
+
+/* You might want to add specific styles for h1, h2 within sections for consistency */
+section h1, section h2 {
+  color: #282c34; /* Dark color for headings */
+  text-align: center; /* Center align section titles */
+  margin-bottom: 1em;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+  background-color: #282c34; /* Matching header background */
+  color: white;
+}
+
+/* Default CRA App.css content that might be useful to keep or adjust */
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header { /* This class was part of default CRA, might not be used with new structure */
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
